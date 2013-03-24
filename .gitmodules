@@ -1,3 +1,9 @@
 [submodule "vimfiles/vundle.git"]
 	path = vimfiles/vundle.git
 	url = http://github.com/gmarik/vundle.git
+[submodule "vimfiles/unite.vim.git"]
+	path = vimfiles/unite.vim.git
+	url = git@github.com:Shougo/unite.vim.git
+[submodule "vimfiles/vim-ref.git"]
+	path = vimfiles/vim-ref.git
+	url = git@github.com:thinca/vim-ref.git
