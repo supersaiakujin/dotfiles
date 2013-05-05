@@ -84,9 +84,13 @@ call unite#set_substitute_pattern('file', '^\~',escape($HOME,'\'),-2)
 call unite#set_substitute_pattern('file', '\\\@<! ', '\\ ', -20)
 call unite#set_substitute_pattern('file', '\\ \@!', '/', -30)
 
-let $BOOST_ROOT = "/usr/include/boost"
-let $OPENCV_ROOT = "/usr/local/include/opencv"
-let $OPENCV2_ROOT = "/usr/local/include/opencv2"
+let $BOOST_ROOT = '/usr/include/boost'
+let $OPENCV_ROOT = '/usr/local/include/opencv'
+let $OPENCV2_ROOT = '/usr/local/include/opencv2'
+let $CPP_ROOT = '/usr/include/c++/4.7.3'
+let $C_ROOT = '/usr/include'
+set path+=$C_ROOT
+set path+=$CPP_ROOT
 set path+=$BOOST_ROOT
 set path+=$OPENCV_ROOT
 set path+=$OPENCV2_ROOT
