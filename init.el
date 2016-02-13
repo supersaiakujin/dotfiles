@@ -1,3 +1,4 @@
+;;; Commentary:
 ;;----------
 (add-to-list 'load-path (expand-file-name "~/.emacs.d/lisp"))
 ;; package
@@ -22,6 +23,7 @@
     company
     company-quickhelp
     flycheck
+    flycheck-pos-tip
     fill-column-indicator
     ))
 (let ((not-installed (loop for x in installing-package-list
@@ -70,8 +72,17 @@
 
 (company-quickhelp-mode 1)
 
-;; enable flycheck
+;;; enable flycheck
+;;; flycheck
+(require 'flycheck)
+(require 'pos-tip)
 (add-hook 'after-init-hook #'global-flycheck-mode)
+;;(eval-after-load 'flycheck
+;;  '(custom-set-variables
+;;    '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
+;;; To disable flycheck, add emacs-lisp-checkdo
+(with-eval-after-load 'flycheck
+  (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc)))
 
 ;; enable fill-column-indicator for 80char line indication
 ;;(require 'fill-column-indicator)
