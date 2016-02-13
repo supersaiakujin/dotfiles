@@ -123,5 +123,7 @@ export CPATH=/usr/local/cuda-7.0/include:$CPATH
 export CUDA_INC_DIR=/usr/local/cuda-7.0/include:$CUDA_INC_DIR
 export CUDA_HOME=/usr/local/cuda-7.0
 
-alias emacs='emacs -nw'
+
+alias emacs='emacs-24.5 -r'
+alias emacsnw='emacs-24.5 -nw'
 
